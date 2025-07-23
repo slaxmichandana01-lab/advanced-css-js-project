@@ -1,0 +1,130 @@
+body {
+  margin: 0;
+  font-family: "Segoe UI", sans-serif;
+  color: #fff;
+  background: linear-gradient(270deg, #ff9a9e, #fad0c4, #fad0c4, #fbc2eb, #a18cd1);
+  background-size: 1000% 1000%;
+  animation: gradientShift 20s ease infinite;
+  overflow-x: hidden;
+}
+
+@keyframes gradientShift {
+  0% { background-position: 0% 50% }
+  50% { background-position: 100% 50% }
+  100% { background-position: 0% 50% }
+}
+
+.container {
+  padding: 20px;
+  text-align: center;
+  max-width: 900px;
+  margin: auto;
+}
+
+.main-title {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+}
+
+.quote-section {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 15px;
+  padding: 20px;
+  margin-bottom: 20px;
+}
+
+.quote-section p {
+  font-size: 1.4rem;
+}
+
+.quote-controls {
+  margin-top: 10px;
+}
+
+.quote-controls button,
+#emoji-selector {
+  margin: 5px;
+  padding: 8px 14px;
+  font-size: 1rem;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+#emoji-selector {
+  background: #fff;
+  color: #333;
+}
+
+button:hover {
+  background: #ffd700;
+  color: #000;
+}
+
+.favorites {
+  background: rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+  padding: 15px;
+  margin-bottom: 20px;
+}
+
+.favorites ul {
+  list-style: none;
+  padding: 0;
+}
+
+.mood-board {
+  background: rgba(255, 255, 255, 0.15);
+  border-radius: 20px;
+  padding: 40px 20px;
+  margin-bottom: 30px;
+  position: relative;
+  overflow: hidden;
+  min-height: 300px;
+}
+
+#quiz-section {
+  margin-top: 20px;
+  background: rgba(0, 0, 0, 0.2);
+  border-radius: 15px;
+  padding: 20px;
+  max-width: 500px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#quiz-question {
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+}
+
+#quiz-options button {
+  margin: 5px;
+  padding: 8px 12px;
+  font-size: 1rem;
+  border-radius: 10px;
+  border: none;
+  cursor: pointer;
+}
+
+#quiz-result {
+  margin-top: 10px;
+  font-weight: bold;
+}
+
+#next-btn {
+  margin-top: 10px;
+  display: none;
+}
+
+.bubble {
+  position: absolute;
+  font-size: 18px;
+  animation: floatUp 2s ease-out forwards;
+  pointer-events: none;
+}
+
+@keyframes floatUp {
+  0% { transform: translateY(0); opacity: 1; }
+  100% { transform: translateY(-120px); opacity: 0; }
+}
